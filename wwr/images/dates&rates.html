@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agua Adventures | Dates & Rates</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="logo.png" alt="Agua Adventures Logo"> 
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dates&rates.html">Dates & Rates</a>
+                <a href="site-plan-rafting.html">Site Plan</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </header>
+        <section class="banner">
+            <h1 class="banner-text">Dates & Rates Summer 2025</h1>
+            <div class="banner-box">
+                <a class="book" href="contactus.html">Schedule Now</a>
+            </div>
+        </section>
+        <main class="rafting-grid">
+            <section class="rafting">
+                <section class="dropdown">
+                    <button class="dropdowns">GRAND CANYON SIX-NIGHT TRIP</button>
+                    <div class="panel" style="display: none;">
+                        <p> (The dates listed will be the date that you spend the night in Marble Canyon. The launch date is the following day.) 2025 Pricing and Dates Grand Canyon 6 night trips: <strong> $2,550 </strong> April 25 May 8, 15, 22, 25, 29 June 5, 12, 19, 23, 26 July 3, 10, 17, 24, 31 August 7, 14, 21 September 4, 12</p>
+                    </div>
+                    <button class="dropdowns">GRAND CANYON THREE-NIGHT TRIP</button>
+                    <div class="panel" style="display: none;">
+                        <p>2025 Pricing and Dates Grand Canyon 3 night trips: <strong> $1,475 </strong> April 30 May 13, 20, 27, 30 June 3, 10, 17, 24, 28 July 1, 8, 15, 22, 29 August 5, 12, 19, 26 September 9, 17</p>
+                    </div>
+                    <button class="dropdowns">DESOLATION SIX-NIGHT TRIP</button>
+                    <div class="panel" style="display: none;">
+                        <p>2025 Pricing and Dates Regular Rate: <strong> $1,790 </strong> Dates July 10, 18, 26 Aug 3, 11, 19, 27 Sept 4</p>
+                    </div>
+                    <button class="dropdowns">SALMON RIVER FIVE-NIGHT TRIP</button>
+                    <div class="panel" style="display: none;">
+                        <p>(The dates listed will be the date that you spend the night in Salmon. The launch date is the following day.) 2025 Pricing and Dates Regular Rate: <strong> $1,540 </strong> Trip Dates June 3, 10, 17, 24 July 2</p>
+                    </div>
+                    <button class="dropdowns">WARM RIVER THREE-NIGHT TRIP</button>
+                    <div class="panel" style="display: none;">
+                        <p>2025 Pricing and Dates Grand Canyon 3 night trips: <strong> $1,425 </strong> April 30 May 13, 20, 27, 30 June 3, 10, 17, 24, 28 July 1, 8, 15, 22, 29 August 5, 12, 19, 26 September 9, 17</p>
+                    </div>
+                    <!--JAVA SCRIPT FOR DROPDOWN BOXES-->
+                    <script>
+                        
+                                                    var acc = 
+                        document.getElementsByClassName("dropdowns");
+                                    var i;
+
+                                    for (i = 0; i < acc.length; i++) {
+                                    acc[i].addEventListener("click", function() {
+                                        this.classList.toggle("active");
+                                        var panel = this.nextElementSibling;
+                                        if (panel.style.display === "block") {
+                                        panel.style.display = "none";
+                                        } else {
+                                        panel.style.display = "block";
+                                        }
+                                    });
+                                    }
+                                    
+                    </script>
+                </section>
+                <img class="rafting-img" src="raftingpage2.jpg" alt="Rafters by waterfall">   
+            </section>
+            <section class="quote">
+                <h2>"The rush of the rapids, the thrill of navigating through nature's wild waters—nothing compares to the feeling of being alive that white water rafting gives you. It's like dancing with the river, feeling its power and rhythm, and realizing that true greatness lies in embracing the adventure of the unknown. Every splash, every turn, every heartbeat echoed with a sense of freedom I'd never experienced before."</h2>
+                <h5>-Sariah Lagos</h5>
+            </section>
+        </main>
+        <footer>
+            <p>Agua Adventures &copy; 2025 - Levi Beasley </p>
+            <p><a href="site-plan-rafting.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="FB icon" style="width:100px;height:100px">
+                </a>
+                <a href="https://X.com" target="_blank">
+                    <img src="images/x.png" alt="X icon" style="width:105px;height:105px">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.jpg" alt="Instagram icon" style="width:100px;height:100px">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

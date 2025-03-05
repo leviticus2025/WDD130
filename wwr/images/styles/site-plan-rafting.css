@@ -68,6 +68,9 @@ p {
   color: var(--paragraph-color-on-white);
   padding: 1em;
 }
+.paragraph {
+  font-family: Noto Sans, Arial, sans-serif;
+}
 .colors {
   width: 100%;
   min-width: 350px;
