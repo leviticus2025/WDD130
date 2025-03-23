@@ -32,12 +32,11 @@ nav {
     justify-content: space-around;
 }
 nav a {
-    text-align: center;
+    justify-content: center;
     color: #194E68;
     text-decoration: none;
-    padding: 30px;
     font-size: 30px;
-    padding-top: 40px;
+    padding: 40px;
 }
 nav a:hover {
     background-color: #194E68;
@@ -102,6 +101,7 @@ h4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #D2DEE1;
 }
 .review-box {
     grid-column: 1/6;
@@ -141,7 +141,6 @@ footer {
     background-color: #194E68;
     color: #D2DEE1;
     padding: 25px 50px;
-    margin-top: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -163,9 +162,103 @@ footer img {
 
 /* START OF NEW CSS FOR CHILD PAGE 1 LOCATIONS */
 
+.headers {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px auto;
+    background-color: #D2DEE1;
+}
+.information-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #D2DEE1;
+}
+.description {
+    grid-column: 1/4;
+    text-align: center;
+    font-size: 35px;
+}
+.schedule-box {
+    grid-column: 4/5;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
 
-
+.palisades-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.palisades-content {
+    grid-column: 1/6;
+    grid-row: 1/11;
+    text-align: center;
+    background-color: #D2DEE1;
+}
+.palisades-content p {
+    font-size: 40px;
+    margin: 25px;
+    opacity: 70%;
+}
+.palisades-img {
+    grid-column: 6/11;
+    grid-row: 1/11;
+    width: 100%;
+}
+.islandpark-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.islandpark-img {
+    grid-column: 1/6;
+    grid-row: 1/11;
+    width: 100%;
+}
+.islandpark-content {
+    grid-column: 6/11;
+    grid-row: 1/11;
+    text-align: center;
+    background-color: #D2DEE1;
+}
+.islandpark-content p {
+    font-size: 40px;
+    padding: 45px;
+    opacity: 70%;
+}
+.mackay-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.mackay-content {
+    grid-column: 1/6;
+    grid-row: 1/11;
+    text-align: center;
+    background-color: #D2DEE1;
+}
+.mackay-content p {
+    font-size: 40px;
+    padding-top: 5px;
+    margin-top: -50px;
+    margin-bottom: -12px;
+    opacity: 70%;
+}
+.mackay-img {
+    grid-column: 6/11;
+    grid-row: 1/11;
+    width: 100%;
+}
+.name {
+    font-size: 50px;
+    padding: 10px;
+}
+h5 , h6 {
+    font-size: 50px;
+}
 /* START OF NEW CSS FOR CHILD PAGE 2 DATES & RATES */
+
 
 
 @media screen and (max-width: 900px) {
