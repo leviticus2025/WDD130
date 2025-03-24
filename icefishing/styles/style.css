@@ -253,9 +253,11 @@ footer img {
 .name {
     font-size: 50px;
     padding: 10px;
+    font-family: 'Lobster Two', Arial, sans-serif;
 }
 h5 , h6 {
     font-size: 50px;
+    font-family: 'Lobster Two', Arial, sans-serif;
 }
 /* START OF NEW CSS FOR CHILD PAGE 2 DATES & RATES */
 
