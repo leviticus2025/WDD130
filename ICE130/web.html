@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.gallery-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust as needed for your slideshow */
+  background-color: #f0f0f0; /* Optional: for better visibility */
+}
+
+.gallery-slide img {
+  width: auto; /* Maintain the natural width of the image */
+  max-width: 100%; /* Prevent the image from exceeding the container's width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+</style>
+<body>
+
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <div class="gallery-slide">
+        <img src="Glacier-Bay-National-Park.jpg">
+    </div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <div class="gallery-slide">
+        <img src="california-landscape-mountains-nature-preview.jpg">
+    </div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <div class="gallery-slide">
+        <img src="banff-national-park-canada-tourism-preview.jpg">
+    </div>
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="pexels-bri-schneiter-28802-346529.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="pexels-ma-jacky-388296502-18682254.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="pexels-pixabay-147411.jpg" style="width:100%" height="auto">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Glacier-Bay-National-Park.jpg" style="width:100%" onclick="currentSlide(1)" alt="Lake and Mountains with snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="california-landscape-mountains-nature-preview.jpg" style="width:100%" onclick="currentSlide(2)" alt="Mountains at Sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="banff-national-park-canada-tourism-preview.jpg" style="width:100%" onclick="currentSlide(3)" alt="Lakes and Mountainous View">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pexels-bri-schneiter-28802-346529.jpg" style="width:100%" onclick="currentSlide(4)" alt="Clear Lake and Mountains">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pexels-ma-jacky-388296502-18682254.jpg" style="width:100%" onclick="currentSlide(5)" alt="Green Plain with Mountains">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="pexels-pixabay-147411.jpg" style="width:100%" onclick="currentSlide(6)" alt="Mountain Range with Lodge on Lake">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
